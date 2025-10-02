@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_system"
+
+[project]
+name = "taxonomize"
+version = "0.1.0"
+description = "Fast taxonomic classification of DNA sequences from FASTQ/FASTA files using BLAST or vsearch"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "BSD-2-Clause"}
+authors = [
+    {name = "Josh Walker", email = "joshowalker@yahoo.com"}
+]
+keywords = ["bioinformatics", "taxonomy", "dna", "sequencing", "blast", "vsearch", "edna"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: BSD License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+
+dependencies = [
+    "biopython>=1.79",
+    "tqdm>=4.62.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/joshuaowalker/taxonomize"
+Repository = "https://github.com/joshuaowalker/taxonomize"
+Issues = "https://github.com/joshuaowalker/taxonomize/issues"
+
+[project.scripts]
+taxonomize = "taxonomize:main"
+
+[tool.setuptools]
+py-modules = ["taxonomize"]
